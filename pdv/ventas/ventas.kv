@@ -1,0 +1,125 @@
+<VentasWindow>:
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    orientation: 'vertical'
+    spacing: dp(10)
+    padding: dp(10)
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: dp(10)
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: dp(10)
+            size_hint_x: 0.75  # Ocupa 3/4 del ancho de la ventana
+
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint_y: None
+                height: dp(40)
+                spacing: dp(10)
+
+                Label:
+                    id: bienvenido_label
+                    text: 'Bienvenido:'
+                    color: 1, 1, 1, 1
+                    size_hint_x: None
+                    width: self.texture_size[0]
+
+                Button:
+                    text: 'Admin'
+                    size_hint_x: None
+                    width: dp(100)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+                Button:
+                    text: 'Signout'
+                    size_hint_x: None
+                    width: dp(100)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+            Label:
+                text: 'Sistema de Ventas'
+                font_size: '24sp'
+                color: 0, 0, 0, 1
+
+            BoxLayout:
+                size_hint_y: None
+                height: dp(40)
+
+                TextInput:
+                    hint_text: 'Buscar por Código'
+                    multiline: False
+                    background_color: 1, 1, 1, 1
+                    foreground_color: 0, 0, 0, 1
+
+                Button:
+                    text: 'Buscar'
+                    background_color: 0.44, 0.26, 0.08, 1
+
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: dp(5)
+
+                TextInput:
+                    hint_text: 'Código de Producto'
+                    multiline: False
+
+                TextInput:
+                    hint_text: 'Cantidad'
+                    multiline: False
+
+                Button:
+                    text: 'Agregar Producto'
+                    size_hint_y: None
+                    height: dp(40)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+        BoxLayout:  # Nueva columna en la extrema derecha
+            orientation: 'vertical'
+            size_hint_x: 0.3  # Ajusta el ancho de esta columna
+            spacing: dp(10)
+
+            TextInput:
+                hint_text: 'Código de Producto'
+                multiline: False
+
+            TextInput:
+                hint_text: 'Cantidad'
+                multiline: False
+
+            Button:
+                text: 'Nueva Compra'
+                size_hint_y: None
+                height: dp(40)
+                background_color: 0.44, 0.26, 0.08, 1
+
+            Label:
+                text: 'Subtotal: $0.00'
+                color: 1, 1, 1, 1
+
+            Label:
+                text: 'IVA (19%): $0.00'
+                color: 1, 1, 1, 1
+
+            Label:
+                text: 'Total: $0.00'
+                color: 1, 1, 1, 1
+
+    BoxLayout:  # Footer en la parte inferior
+        canvas.before:
+            Color:
+                rgba: 0.44, 0.26, 0.08, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        size_hint_y: None
+        height: dp(40)
+        Label:
+            text: '@2023'
+            color: 0.75, 0.75, 0.75, 1
