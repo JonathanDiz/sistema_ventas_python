@@ -49,6 +49,7 @@
                 color: 0, 0, 0, 1
 
             BoxLayout:
+                spacing: dp(3)
                 size_hint_y: None
                 height: dp(40)
 
@@ -64,7 +65,7 @@
 
             BoxLayout:
                 orientation: 'vertical'
-                spacing: dp(5)
+                spacing: dp(3)
 
                 TextInput:
                     hint_text: 'Código de Producto'
@@ -77,9 +78,90 @@
                 Button:
                     text: 'Agregar Producto'
                     size_hint_y: None
-                    height: dp(40)
+                    height: dp(20)
                     background_color: 0.44, 0.26, 0.08, 1
 
+            BoxLayout:
+                orientation:'horizontal'
+                spacing: dp(10)
+                Button:
+                    text: 'Modificar \nProducto'
+                    size_hint_x: None
+                    width: dp(130)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+                Button:
+                    text: 'Borrar \nProducto'
+                    size_hint_x: None
+                    width: dp(130)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+                Button:
+                    text: 'Realizar \nVenta'
+                    size_hint_x: None
+                    width: dp(130)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+                Button:
+                    text: 'Cancelar \nVenta'
+                    size_hint_x: None
+                    width: dp(130)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+            BoxLayout:
+                orientation:'horizontal'
+                spacing: dp(10)
+                Button:
+                    text:'Ver \nVentas'
+                    size_hint_x: None
+                    width: dp(130)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+                Button:
+                    text: 'Generar \nReportes'
+                    size_hint_x: None
+                    width: dp(130)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+                Button: 
+                    text: 'Calcular \nTotal'
+                    size_hint_x: None
+                    width: dp(130)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+                Button: 
+                    text: 'Confirmar \nVenta'
+                    size_hint_x: None
+                    width: dp(130)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+            BoxLayout:
+                orientation:'horizontal'
+                spacing: dp(10)
+                Button:
+                    text: 'Descuentos'
+                    size_hint_x: None
+                    width: dp(130)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+                Button:
+                    text: 'Caja'
+                    size_hint_x: None
+                    width: dp(130)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+                Button:
+                    text:'Facturación'
+                    size_hint_x: None
+                    width: dp(130)
+                    background_color: 0.44, 0.26, 0.08, 1
+
+                Button:
+                    text: 'Estadísticas'
+                    size_hint_x: None
+                    width: dp(130)
+                    background_color: 0.44, 0.26, 0.08, 1
+                
         BoxLayout:  # Nueva columna en la extrema derecha
             orientation: 'vertical'
             size_hint_x: 0.3  # Ajusta el ancho de esta columna
@@ -121,5 +203,5 @@
         size_hint_y: None
         height: dp(40)
         Label:
-            text: '@2023'
+            text: 'Sistema de Ventas @2023'
             color: 0.75, 0.75, 0.75, 1
