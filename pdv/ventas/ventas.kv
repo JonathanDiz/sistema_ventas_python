@@ -5,6 +5,7 @@
         Rectangle:
             size: self.size
             pos: self.pos
+
     orientation: 'vertical'
     spacing: dp(10)
     padding: dp(10)
@@ -16,7 +17,7 @@
         BoxLayout:
             orientation: 'vertical'
             spacing: dp(10)
-            size_hint_x: 0.75  # Ocupa 3/4 del ancho de la ventana
+            size_hint_x: 0.75
 
             BoxLayout:
                 orientation: 'horizontal'
@@ -25,11 +26,8 @@
                 spacing: dp(10)
 
                 Label:
-                    id: bienvenido_label
                     text: 'Bienvenido:'
                     color: 1, 1, 1, 1
-                    size_hint_x: None
-                    width: self.texture_size[0]
 
                 Button:
                     text: 'Admin'
@@ -81,90 +79,61 @@
                     height: dp(20)
                     background_color: 0.44, 0.26, 0.08, 1
 
-            BoxLayout:
-                orientation:'horizontal'
+            GridLayout:
+                cols: 4
                 spacing: dp(10)
-                Button:
-                    text: 'Modificar \nProducto'
-                    size_hint_x: None
-                    width: dp(130)
-                    background_color: 0.44, 0.26, 0.08, 1
 
                 Button:
-                    text: 'Borrar \nProducto'
-                    size_hint_x: None
-                    width: dp(130)
+                    text: 'Modificar\nProducto'
                     background_color: 0.44, 0.26, 0.08, 1
 
                 Button:
-                    text: 'Realizar \nVenta'
-                    size_hint_x: None
-                    width: dp(130)
+                    text: 'Borrar\nProducto'
                     background_color: 0.44, 0.26, 0.08, 1
 
                 Button:
-                    text: 'Cancelar \nVenta'
-                    size_hint_x: None
-                    width: dp(130)
-                    background_color: 0.44, 0.26, 0.08, 1
-
-            BoxLayout:
-                orientation:'horizontal'
-                spacing: dp(10)
-                Button:
-                    text:'Ver \nVentas'
-                    size_hint_x: None
-                    width: dp(130)
+                    text: 'Realizar\nVenta'
                     background_color: 0.44, 0.26, 0.08, 1
 
                 Button:
-                    text: 'Generar \nReportes'
-                    size_hint_x: None
-                    width: dp(130)
+                    text: 'Cancelar\nVenta'
                     background_color: 0.44, 0.26, 0.08, 1
 
-                Button: 
-                    text: 'Calcular \nTotal'
-                    size_hint_x: None
-                    width: dp(130)
+                Button:
+                    text: 'Ver\nVentas'
                     background_color: 0.44, 0.26, 0.08, 1
 
-                Button: 
-                    text: 'Confirmar \nVenta'
-                    size_hint_x: None
-                    width: dp(130)
+                Button:
+                    text: 'Generar\nReportes'
                     background_color: 0.44, 0.26, 0.08, 1
 
-            BoxLayout:
-                orientation:'horizontal'
-                spacing: dp(10)
+                Button:
+                    text: 'Calcular\nTotal'
+                    background_color: 0.44, 0.26, 0.08, 1
+
+                Button:
+                    text: 'Confirmar\nVenta'
+                    background_color: 0.44, 0.26, 0.08, 1
+
                 Button:
                     text: 'Descuentos'
-                    size_hint_x: None
-                    width: dp(130)
                     background_color: 0.44, 0.26, 0.08, 1
 
                 Button:
                     text: 'Caja'
-                    size_hint_x: None
-                    width: dp(130)
                     background_color: 0.44, 0.26, 0.08, 1
 
                 Button:
-                    text:'Facturación'
-                    size_hint_x: None
-                    width: dp(130)
+                    text: 'Facturación'
                     background_color: 0.44, 0.26, 0.08, 1
 
                 Button:
                     text: 'Estadísticas'
-                    size_hint_x: None
-                    width: dp(130)
                     background_color: 0.44, 0.26, 0.08, 1
-                
-        BoxLayout:  # Nueva columna en la extrema derecha
+
+        BoxLayout:
             orientation: 'vertical'
-            size_hint_x: 0.3  # Ajusta el ancho de esta columna
+            size_hint_x: 0.3
             spacing: dp(10)
 
             TextInput:
@@ -193,7 +162,7 @@
                 text: 'Total: $0.00'
                 color: 1, 1, 1, 1
 
-    BoxLayout:  # Footer en la parte inferior
+    BoxLayout:
         canvas.before:
             Color:
                 rgba: 0.44, 0.26, 0.08, 1
